@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function index()
     {
         // dd(Product::latest()->paginate(10));
-        $products = Product::latest()->paginate(4);
+        $products = Product::latest()->get();
         // dd($products);
         return view('front.home.index', [
             'products' => $products
